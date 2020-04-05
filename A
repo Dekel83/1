@@ -1,13 +1,13 @@
 month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 income = [10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000, 10000]
-expenses = [8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 11500]
-#
-if len(month) != 12 or len(income) != 12 or len(expenses) != 12:
-    print("N/A")
-else:
-    for item in zip(month,income,expenses):
-        i = item[1]
-        e = item[2]
-        print(item[0], " - ", i - e )
-    total = sum(income) - sum(expenses)
-    print("Yearly Summary: ",total)
+expenses = [8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 8500, 9700,9000]
+
+for l in month, income, expenses:
+    if len(l) != 12:
+        print("N/A")
+for item in zip(month,income,expenses):
+    i = item[1]
+    e = item[2]
+    print(item[0], " - ", i - e )
+total = sum(income) - sum(expenses)
+print("Yearly Summary: ",total)
